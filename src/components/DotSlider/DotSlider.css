@@ -1,0 +1,21 @@
+#slider1 {
+    display: flex;
+    gap: 1.3rem;
+
+  }
+  
+  #slider1 div {
+    height: 13px;
+    width: 13px;
+    background-color: var(--light-gray);
+
+    border: solid transparent;
+    border-radius: 100px;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  #slider1 div.active , #slider1 div:hover {
+    background-color: white;
+  }
+  

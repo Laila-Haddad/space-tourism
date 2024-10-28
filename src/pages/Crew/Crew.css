@@ -1,0 +1,87 @@
+html:has(main.crew) {
+  background-image: url("../../assets/crew/background-crew-desktop.jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  html:has(main.crew) {
+    background-image: url("../../assets/crew/background-crew-tablet.jpg") !important;
+
+    & .container img{
+        margin: auto;
+    }
+    
+    & .content {
+      justify-content: center !important;
+
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  html:has(main.crew) {
+    background-image: url("../../assets/crew/background-crew-mobile.jpg") !important;
+  }
+}
+
+body:has(main.crew) {
+
+  & main{
+    padding-bottom: 0;
+  }
+
+  & h5 {
+    color: var(--white);
+    margin-bottom: 2rem;
+    align-self: start;
+
+    & span {
+      color: var(--light-gray);
+      font-weight: bold;
+    }
+  }
+  
+  & .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+
+    & .personDesc{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: var(--align-elements);
+        text-align: var(--align-elements);
+    }
+
+    & .dotSlider{
+        /* position: absolute; */
+        margin-block: 2rem;
+    }
+
+    & .imgWrapper{
+    display: flex;
+    align-items: end;
+    }
+
+    & img{
+        width: 100%;
+        max-width: 350px;
+        max-height: 600px;
+        /* margin-top: 4rem; */
+        /* height: 100%; */
+
+
+
+    }
+  }
+
+  & h4 {
+    opacity: 50%;
+    margin-bottom: 1rem;
+  }
+}

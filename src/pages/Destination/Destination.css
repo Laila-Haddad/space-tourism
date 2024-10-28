@@ -1,0 +1,71 @@
+html:has(main.destination) {
+  background-image: url("../../assets/destination/background-destination-desktop.jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  html:has(main.destination) {
+    background-image: url("../../assets/destination/background-destination-tablet.jpg") !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html:has(main.destination) {
+    background-image: url("../../assets/destination/background-destination-mobile.jpg") !important;
+  }
+}
+
+body:has(main.destination) {
+  & h5 {
+    color: var(--white);
+
+    & span {
+      color: var(--light-gray);
+      font-weight: bold;
+    }
+  }
+
+  & .content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    & hr{
+        display: block;
+        width: 100%;
+        border-color: var(--light-gray);
+    }
+
+    & img{
+        max-width: 450px;
+        width: 100%;
+        margin-top: 3rem;
+        align-self: center;
+    }
+    
+  }
+
+  & .planetInfo{
+    display: flex;
+    gap: 3rem;
+    align-items: var(--align-elements);
+    justify-content: var(--align-elements);
+    flex-wrap: wrap;
+
+  }
+  & .planetDesc{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: var(--align-elements);
+    text-align: var(--align-elements);
+  }
+
+  & .subHeading{
+    color: var(--white);
+    margin-top: .5rem;
+  }
+}
+

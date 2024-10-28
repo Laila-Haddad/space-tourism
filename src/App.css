@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow:wght@300;400&display=swap');
+
+
+:root {
+  --navy: #0b0d17;
+  --gray: #242730;
+  --light-gray: #4a4f5f;
+  --light-purple: #d0d6f9;
+  --white: #ffffff;
+
+  --font: "Bellefair", serif;
+  --secondary-font: "Barlow Condensed", sans-serif;
+  --text-font: "Barlow", sans-serif;
+
+
+    --breakpoint-small: 480px;
+    --breakpoint-medium: 768px;
+    --breakpoint-large: 1024px;
+    --breakpoint-xlarge: 1200px;
+
+    --padding: 3rem;
+    --padding-small: 1rem;
+
+    --padding-Xlarge: 6rem;
+
+    --page-padding: var(--padding);
+
+    --align-left: start;
+    --align-center: center;
+
+    --align-elements: var(--align-left)
+  
+}
+
+
+
+@media (min-width: 1400px) {
+  :root{
+    --page-padding: var(--padding-Xlarge)
+  }
+}
+
+
+@media (max-width: 768px) {
+  :root{
+    --align-elements: var(--align-center);
+    --page-padding: var(--padding-small);
+
+  }
+
+  h5{
+    font-size: 20px !important;
+    align-self: center !important;
+    text-align: center;
+  }
+    
+  h3{
+    font-size: 40px !important;
+  }
+  
+  
+  h4{
+    font-size: 20px !important;
+  }
+
+}
+
+
+
+@media (max-width: 480px) {
+  :root{
+    --align-elements: var(--align-center);
+  }
+
+  h1{
+    font-size: 80px !important;
+  }
+
+  h2{
+    font-size: 80px !important;
+  }
+
+  
+  h3{
+    font-size: 28px !important;
+  }
+
+  h4{
+    font-size: 16px !important;
+  }
+
+  
+  p{
+    font-size: 15px !important;
+
+  }
+}
+
+
+
+
+html {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body{
+  padding-inline: var(--page-padding);
+}
+
+h1 {
+  font-size: calc(100px +  3vw);
+  text-transform: uppercase;
+  font-family: var(--font);
+  color: var(--white);
+  font-weight: 100;
+}
+h2 {
+  font-size: 100px;
+  font-family: var(--font);
+  text-transform: uppercase;
+  font-weight: 100;
+
+}
+h3 {
+  font-size: 56px;
+  font-family: var(--font);
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: var(--font);
+  font-weight: 100;
+  
+}
+
+h5 {
+  font-size: 28px;
+  font-family: var( --secondary-font);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--light-purple);
+  font-weight: 300;color: var(--white);
+}
+
+p {
+  font-family: var(--text-font);
+  font-size: 18px;
+  color: var(--light-purple);
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: .4px;
+}
+
+.subHeading {
+  font-family: var(--font);
+  font-size: 28px;
+  text-transform: uppercase;
+  
+}
+
+.subHeading2 {
+  font-size: 14px;
+  font-family: var(--secondary-font);
+  letter-spacing: 2.35px;
+  text-transform: uppercase;
+  color: var(--light-purple);
+  font-weight: 300;
+
+}
+
+.navLink {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  letter-spacing: 2.35px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+main{
+  padding-block: 4rem;
+}
+
+.container{
+  padding-inline: var(--page-padding);
+}
+
+
+.bm-burger-button {
+  position: fixed;
+  width: 26px;
+  height: 26px;
+  right: 20px;
+  top: 35px;
+}
+
+.bm-burger-bars, .bm-cross  {
+  background: var(--light-purple);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  width: 50px !important;
+  height: 36px;
+}
+
+.bm-menu-wrap {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 200px !important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background-color: rgba(48, 54, 64, 0.279);
+  backdrop-filter: blur(20px);
+  padding: 5rem  0 0 1.5em;
+  font-size: 1.15em;
+
+}

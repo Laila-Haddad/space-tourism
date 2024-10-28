@@ -1,0 +1,28 @@
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  /* position: fixed; */
+
+}
+
+hr.hr {
+  width: 25vw;
+  z-index: 100;
+  height: 0;
+  border-color: var(--gray);
+}
+.tabs {
+  background-color: rgba(48, 54, 64, 0.279);
+  backdrop-filter: blur(10px);
+  padding-inline: 9vw;
+  margin-right: calc(-1 * var(--page-padding));
+
+}
+
+@media (max-width: 1024px) {
+  hr.hr {
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+.tab-group {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navLink{
+    padding-block:2rem;
+    color: var(--white);
+    text-decoration: none;
+    user-select: none;
+    border-bottom: solid transparent 3px ;
+
+}
+
+.navLink:hover{
+    border-color:var(--light-gray) ;
+}
+
+.active, .navLink:hover.active{
+    border-color: var(--white);
+}
+
+.hamburger{
+    border-right: solid transparent 3px ;
+    border-bottom: none;
+    padding-block: .3rem;
+
+}
+.active.hamburger, .navLink:hover.active.hamburger{
+    border-color: var(--white);
+}
+
+.tab-group:has(.hamburger){
+    flex-direction: column;
+}
