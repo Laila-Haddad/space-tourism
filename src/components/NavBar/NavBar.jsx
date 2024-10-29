@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./NavBar.module.css";
-import Logo from "../../assets/shared/logo.svg";
+import Logo from "/assets/shared/logo.svg";
 import Tabs from "../Tabs/Tabs";
 import { useWindowSize } from "../../hooks/useWindowSize";
 

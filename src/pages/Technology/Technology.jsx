@@ -23,7 +23,7 @@ const Technology = () => {
               <div className="content" key={index}>
                 {width <= 1220 && (
                   <img
-                    src={`/src/${element.images.landscape}`}
+                    src={element.images.landscape}
                     className="landscapeImg"
                   ></img>
                 )}
@@ -45,7 +45,7 @@ const Technology = () => {
 
                 {width > 1220 && (
                   <img
-                    src={`/src/${element.images.portrait}`}
+                    src={element.images.portrait}
                     height="100%"
                     className="portImg"
                   ></img>

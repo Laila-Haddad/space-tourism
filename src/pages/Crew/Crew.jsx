@@ -37,7 +37,7 @@ const Crew = () => {
 
               <div className="imgWrapper">
               <PageTransition direction="right">
-              <img src={`/src/${person.images.webp}`}></img>
+              <img src={person.images.webp}></img>
               </PageTransition>
 
               

@@ -18,7 +18,7 @@ const Destination = () => {
           index === active[0] && (
             <div className="content" key={index}>
               <PageTransition direction="up">
-                <img src={`/src/${destination.images.webp}`}></img>
+                <img src={destination.images.webp}></img>
               </PageTransition>
               <div className="planetDesc">
                 <Tabs
