@@ -5,10 +5,19 @@ import Tabs from "../Tabs/Tabs";
 import { useWindowSize } from "../../hooks/useWindowSize";
 
 import { slide as Menu } from "react-burger-menu";
+import { useLocation } from "react-router-dom";
+
+const navItems = [
+  { name: "/home", index: 0 },
+  { name: "/destination", index: 1 },
+  { name: "/crew", index: 2 },
+  { name: "/technology", index: 3 }
+];
 
 const NavBar = () => {
+  const location = useLocation()
   const { width, _ } = useWindowSize();
-  const active = useState(0);
+  const active = useState(navItems.filter(item => item.name === location.pathname)[0].index);
 
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => {
