@@ -1,16 +1,16 @@
 import React from "react";
 import "./Slider.css";
 
-const Slider = ({ number, activeSlide }) => {
+const Slider = ({ nSlides, activeSlide : [active , setActive] , numbered  }) => {
   return (
-    <div className="sliderWrapper">
-      {Array.from({ length: number }, (_, index) => (
+    <div id={numbered? "nSlider": "dotSlider"}>
+      {Array.from({ length: nSlides }, (_, index) => (
         <div
           key={index}
-          onClick={() => activeSlide[1](index)}
-          className={index === activeSlide[0] ? "active slider2" : "slider2"}
+          onClick={() => setActive(index)}
+          className={index === active ? "active" : null}
         >
-          {index + 1}
+          {numbered && index + 1}
         </div>
       ))}
     </div>

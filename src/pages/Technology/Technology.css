@@ -42,9 +42,10 @@ body:has(main.technology) {
   & .content {
     display: flex;
     justify-content: space-between;
-    padding-top: 2rem;
+    padding-top: 1rem;
     gap: 2rem;
     flex-wrap: wrap;
+    align-items: center;
 
     margin-right: calc(-1 * var(--page-padding));
 

@@ -3,6 +3,7 @@ import { fetchTech } from "../../data/api";
 import "./Technology.css";
 import Slider from "../../components/Slider/Slider";
 import { useWindowSize } from "../../hooks/useWindowSize";
+import PageTransition from "../../components/PageTransition/PageTransition";
 
 const Technology = () => {
   const tech = fetchTech();
@@ -15,11 +16,11 @@ const Technology = () => {
         <span>03</span> Space launch 101
       </h5>
 
-      <div className="content">
+      <div >
         {tech.map(
           (element, index) =>
             index === active[0] && (
-              <>
+              <div className="content" key={index}>
                 {width <= 1220 && (
                   <img
                     src={`/src/${element.images.landscape}`}
@@ -27,14 +28,20 @@ const Technology = () => {
                   ></img>
                 )}
                 <div className="slider">
-                  <Slider activeSlide={active} number={tech.length}></Slider>
+                  <Slider activeSlide={active} nSlides={tech.length} numbered={true}></Slider>
                 </div>
 
-                <div className="techDesc" key={index}>
-                  <p className="subHeading2">THE TERMINOLOGy...</p>
+                <PageTransition direction="up">
+                <div className="techDesc">
+
+                  <p className="subHeading2">the terminology...</p>
                   <h3>{element.name}</h3>
                   <p>{element.description}</p>
                 </div>
+
+                </PageTransition>
+
+                <PageTransition direction="up">
 
                 {width > 1220 && (
                   <img
@@ -42,8 +49,10 @@ const Technology = () => {
                     height="100%"
                     className="portImg"
                   ></img>
+                  
                 )}
-              </>
+                </PageTransition>
+                </div>
             )
         )}
       </div>

@@ -8,6 +8,7 @@ import { slide as Menu } from "react-burger-menu";
 
 const NavBar = () => {
   const { width, _ } = useWindowSize();
+  const active = useState(0);
 
   const [menuOpen, setMenuOpen] = useState(false);
   const closeMenu = () => {
@@ -24,6 +25,7 @@ const NavBar = () => {
               tabs={["Home", "Destination", "Crew", "Technology"]}
               numbering={!(width < 768)}
               isNav={true}
+              activeTab={active}
             ></Tabs>
           </div>
         </>

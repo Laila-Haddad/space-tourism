@@ -9,15 +9,11 @@
     text-decoration: none;
     user-select: none;
     border-bottom: solid transparent 3px ;
-
+    position: relative;
 }
 
 .navLink:hover{
     border-color:var(--light-gray) ;
-}
-
-.active, .navLink:hover.active{
-    border-color: var(--white);
 }
 
 .hamburger{
@@ -33,3 +29,13 @@
 .tab-group:has(.hamburger){
     flex-direction: column;
 }
+
+.underline {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--white) ;
+}
+  

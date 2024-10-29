@@ -99,11 +99,25 @@
 }
 
 
+.fade-background {
+  background-color: var(--navy);
+  animation: fadeBackground 0.8s ease-in-out forwards;
+}
 
+@keyframes fadeBackground {
+  0% {
+    background-color:var(--navy);
+  }
+  
+  to {
+    background-color: transparent;
+  }
+}
 
 html {
   background-color: var(--navy);
   color: var(--white);
+ 
 }
 
 * {
@@ -114,6 +128,9 @@ html {
 
 body{
   padding-inline: var(--page-padding);
+  overflow-x: hidden;
+  background-color: transparent;
+  transition: background-color 0.8s ease-in-out;
 }
 
 h1 {

@@ -1,4 +1,4 @@
-.slider2 {
+#nSlider div{
   border-radius: 1000px;
   display: flex;
   flex-direction: column;
@@ -15,33 +15,57 @@
 font-family: var(--font);
 }
 
-.slider2:hover {
+#nSlider div:hover {
   border-color: var(--white);
 }
 
-.slider2.active,
-.slider2:hover.active {
+#nSlider div.active,
+#nSlider div:hover.active {
   background-color: var(--white);
   border-color: transparent;
   color: var(--navy);
 }
 
-.sliderWrapper {
+#nSlider {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
 @media (max-width: 1220px) {
-  .slider2{
+  #nSlider div{
     height: 50px;
     width: 50px;
   font-size: 20px;
 
   }
 
-  .sliderWrapper{
+  #nSlider{
   flex-direction: row;
 
   }
+}
+
+
+
+
+#dotSlider {
+  display: flex;
+  gap: 1.3rem;
+
+}
+
+#dotSlider div {
+  height: 13px;
+  width: 13px;
+  background-color: var(--light-gray);
+
+  border: solid transparent;
+  border-radius: 100px;
+  margin: auto;
+  cursor: pointer;
+}
+
+#dotSlider div.active , #dotSlider div:hover {
+  background-color: white;
 }

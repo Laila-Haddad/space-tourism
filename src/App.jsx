@@ -7,15 +7,17 @@ import Crew from "./pages/Crew/Crew";
 import Technology from "./pages/Technology/Technology";
 import NotFound from "./pages/NotFound/NotFound";
 import NavBar from "./components/NavBar/NavBar";
-
+import PageTransition from './components/PageTransition/PageTransition'
+import useHtmlFadeEffect from "./hooks/usePageTransition";
 function App() {
   const location = useLocation().pathname.substring(1);  
-  
+  useHtmlFadeEffect()
   return (
     <>
     <nav>
       <NavBar></NavBar>
     </nav>
+    <PageTransition direction="right">
       <main className={location}>
         <Routes>
           <Route path="/home" element={<Home />} />
@@ -27,6 +29,7 @@ function App() {
           <Route path="*" element={<Navigate to="/notFound" replace />} />
         </Routes>
       </main>
+      </PageTransition>
     </>
   );
 }
