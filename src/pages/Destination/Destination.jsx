@@ -18,10 +18,7 @@ const Destination = () => {
           index === active[0] && (
             <div className="content" key={index}>
               <PageTransition direction="up">
-                <img
-                  src={`/src/${destination.images.webp}`}
-                  height="100%"
-                ></img>
+                <img src={`/src/${destination.images.webp}`}></img>
               </PageTransition>
               <div className="planetDesc">
                 <Tabs
@@ -29,17 +26,19 @@ const Destination = () => {
                   activeTab={active}
                 ></Tabs>
                 <PageTransition direction="up">
-                  <h2>{destination.name}</h2>
-                  <p>{destination.description}</p>
-                  <hr />
-                  <div className="planetInfo">
-                    <div>
-                      <h6 className="subHeading2">AVG. DISTANCE</h6>
-                      <p className="subHeading">{destination.distance}</p>
-                    </div>
-                    <div>
-                      <h6 className="subHeading2">Est. travel time</h6>
-                      <p className="subHeading">{destination.travel}</p>
+                  <div className="planetDesc">
+                    <h2>{destination.name}</h2>
+                    <p>{destination.description}</p>
+                    <hr />
+                    <div className="planetInfo">
+                      <div>
+                        <h6 className="subHeading2">AVG. DISTANCE</h6>
+                        <p className="subHeading">{destination.distance}</p>
+                      </div>
+                      <div>
+                        <h6 className="subHeading2">Est. travel time</h6>
+                        <p className="subHeading">{destination.travel}</p>
+                      </div>
                     </div>
                   </div>
                 </PageTransition>
