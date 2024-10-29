@@ -7,4 +7,4 @@ This is a challenge presented in Frontend Mentor,
 - Vanilla CSS
 
 ## Links
-- Link to the live Website : [Live Website](https://github.com/Laila-Haddad/space-tourism/home)
+- Link to the live Website : [Live Website](https://space-tourism3.netlify.app/home)
